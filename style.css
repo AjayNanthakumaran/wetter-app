@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-image: url("../img/clearsky.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: background-image 1.5s ease-in-out
+
+}
+
+/* ================ NAVBAR =======================*/
+header .search {
+    display: flex;
+
+}
+#city{
+    height: 35px;
+    margin: 7px 7px 7px;
+    margin-left: 50px;
+    transition: .2s;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: rgb(46, 72, 117) !important;
+    border-radius: 5px;
+    width: 400px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid white;
+    margin-top: 20px; 
+    color: white;
+
+}
+input:focus{
+    border:  rgb(190, 190, 190) !important;
+    
+}
+
+input::placeholder{
+    color: grey;
+    font-size: 0.9rem;
+}
+
+input::placeholder{
+    color: rgb(197, 185, 185);
+}
+
+input:active{
+    background-color: #0077B5;
+}
+
+
+
+
+i{
+    cursor: pointer;
+    margin-top: 25px;
+    margin-left: 10px;
+    color: white;
+    position: sticky;
+    width: 100px;
+    height: 100px;
+}
+
+
+
+i:hover{
+    color: rgb(200, 200, 200) ;
+}
+
+i:active{
+    color: rgb(134, 133, 133)
+}
+
+
+/* ================ MAIN SECTION =======================*/
+
+#forcast-fullday {
+    margin-top: 100px;
+    margin-left: 915px;
+    width: 450px;
+    height: 200px;
+    backdrop-filter: blur(40px);
+    border-radius: 13px;
+    overflow-y: scroll; /* Immer Scroll anzeigen */
+    scrollbar-width: thin; /* Dünne Scrollbar für Firefox */
+    scrollbar-color: white rgba(0,0,0,0.5); /* Farbe der Scrollbar für Firefox */
+}
+
+#other-info {
+    margin-top: 100px;
+    margin-left: 850px;
+    width: 600px;
+    height: 200px;
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+    overflow-y: scroll; 
+    overflow-x: hidden;
+    scrollbar-width: thin; 
+    scrollbar-color: white rgba(0,0,0,0.5); 
+    color: white;
+}
+
+
+#min-max ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+}
+
+#min-max span{
+    font-size: 1.5rem;
+}
+
+
+
+#min-max img{
+    width: 30px;
+    height: 30px;
+}
+
+#min-max img:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+
+#min-max ul li{
+    width: 600px;
+    height: 50px;
+    list-style-type: none;
+    margin: 10px;
+    gap: 5px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+#header-forcast{
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.hourly-item {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    color: white;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    border-bottom: white solid;
+    animation: slideIn 0.5s ease-out;
+}
+@keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+.hourly-item .temp-end {
+    margin-left: auto;
+}
+
+.hourly-item .temp-end {
+    text-align: right ;
+}
+.hourly-item img{
+    width: 30px;
+    height: 30px;
+
+}
+.hourly-item img:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+#weather-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    width: 450px;
+    top: 450px;
+    margin-left: 190px;
+    margin-top: -360px;
+}
+
+#weather-container img{
+    margin-top: 34px;
+    width: 150px;
+    height: 150px;
+}
+
+.time{
+    margin-left: 230px;
+    display: flex;
+    gap: 5px;
+}
+.temp-feel{
+    margin-left: 200px;
+    display: flex;
+    gap: 5px;
+}
+
+#temp-div{
+    color: white;
+    font-size: 7.9rem;
+}
+
+#weather-icon img {
+    animation: float 3s ease-in-out infinite;
+}
+
+
+
+@keyframes float {
+    0%{
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+  
+
+
+
+#weather-city{
+    color: white;
+}
